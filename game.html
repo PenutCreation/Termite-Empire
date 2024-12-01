@@ -1,0 +1,1683 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<title>Termite Empire - Game</title>
+<link rel="icon" href=
+"img/icon-game.png" 
+          type="image/x-icon">
+    <meta name="theme-color" content="black" />
+
+ <fieldset class="bar">
+   <img>
+   <div class="UserMenu">
+     <h2 class="titleGame">Termite Empire</h2>
+    <p style="float:left;" class="version"></p>      
+   
+       <tr>
+
+
+     <a>
+
+       <img
+       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFvrD18mtsTx2O_KZyYE-QOyj0ni2AiZudHLcJz3Z2FgMXyMd7Zzytx1D&s=10"
+       alt="" id="pfp">
+
+</a>
+</tr>
+   </div>
+ </fieldset>
+ 
+
+ 
+ 
+
+<center>  
+        <figure></figure>
+<label>
+
+
+        <div class="mainGameContent">
+
+    <button class="button">    
+    <a href="Game.html" style="color:white;">Fix Music</a>        
+          </button>
+    <figcaption></figcaption>
+         
+            <h2 style="color:brown;"class="ResinAmountDisplay">
+              
+              <img class="currencyicon" src="img/Resin_page_icon.png">:<span class="ResinAmount">0</span> </h2>
+            
+<figure></figure>
+
+		<h3 class="WorkerAmountDisplay">
+		  <img style="width:35px" src="img/fungi.png">:<span class="WorkerAmount">0</span></h3>
+		
+		<figure></figure>
+		<h1></h1>
+		
+
+
+<center>
+
+     <img onclick="CollectSmallResin()"id="rotate"width="100px" src="img/Resin_page_icon.png">
+   </center>
+  <style>
+body {font-family:Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.currencyicon {
+  width: 20px;
+}
+#rotate {
+transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+    animation: rotation 20s linear infinite;
+}
+#rotate:hover {
+  width: 90px;
+}
+#rotate:active {
+  width: 100px;
+transform: translateY(4px);
+}
+/* Set a style for all buttons */
+.button {
+  background-color: #5C4033;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+<figure></figure>
+
+	       
+		          
+        <div id="buttonSettings9">    <b class="WorkerAmountDisplay">
+
+        <h4>Power:</h4>
+		<span class="bSecRateNumber">0</span> 
+        </b></div>
+		    <figure></figure>
+		   
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+
+/* Set a style for all buttons */
+#obutton {
+  background-color: #C19A6B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1000px;
+}
+
+#obutton:hover {
+  opacity: 0.8;
+border-radius: 1000px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'"
+style="width:auto; " id="obutton">UPDATES</button>
+
+
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" >
+	<h2>3 MAILS:</h2>
+<fieldset>
+  <h1>MEGA REVAMP!</h1>
+  
+  <kbd>November 30 2024</kbd>
+  <p>Revamp Game mechanics & designs!</p>
+</fieldset>
+<fieldset>
+  <h1>Winter Event</h1>
+  
+  <kbd>Ooctober 23 2024</kbd>
+  <p>Winter is Coming November 5 2024. new creature incoming and hard survival, pack some foods for your termite as winter will last a 2 months</p>
+  <p>Now is spring is getting colder. new creature incoming</p>
+<p>Huge Resin is forming. better collect them, event soon so be with your termites!</p>
+</fieldset>
+<fieldset>
+  <h1>Welcome</h1>
+  ,
+  <kbd>Ooctober 17 2024</kbd>
+  <p>10 Newbie Has Arrived Welcome!</p>
+</fieldset>
+
+</div>
+  
+</div>
+</form>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+
+/* Set a style for all buttons */
+#obutton {
+  background-color: #C19A6B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1000px;
+}
+
+#obutton:hover {
+  opacity: 0.8;
+border-radius: 1000px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn1 {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+.containerq {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content1 {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close1 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animateq {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn1 {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+    
+<body onoffline="fun()">
+ 
+
+
+
+
+     
+
+       </fieldset>
+      <marquee></marquee>
+          
+     
+<script>
+ 
+</script>
+
+
+
+
+		
+                </center>   
+	    <style>
+ 
+            </style>
+        
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script async src="scripts/app.js" type="text/javascript"></script>
+</body>
+        
+</html>
+
+
+
+</fieldset>
+ 
+ <fieldset id="TERMITE"class="box-led"><legend><span style="color:white;">SHOP</span></legend>
+
+                
+
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:28px;"src="img/PETS/Termite_Worker_Sprite.png">Small
+	   Termite</h1>
+	   
+                      <p>Small Termite worker. it can only gaves you 0.00000001 resins
+                      per 3 second</p>
+                      <p>Per Purchase more Resins</p>
+	  
+ <li class="purchaseItem" id="item_TermiteWorker" data-price="0.000200"
+ data-bits-per-sec="0.00000001">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase</p>
+
+<kbd class="itemPrice">0.00000800</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>   
+            
+            
+	 <fieldset class="SHOP">
+	   <h1><img style="width:40px;"src="img/PETS/Termite_Worker_Sprite.png">Classic
+	   Termite</h1>
+	   
+             
+             <p>he a cool & very not cringe termite</p>
+	  <p>Can Farm 0.00000005 per 3 Second</p>
+ <li class="purchaseItem" id="item_ClassicTermite" data-price="0.00002000"
+ data-bits-per-sec="0.00000005">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.00002000</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+ 
+ <figure></figure>
+ 
+	 <fieldset class="SHOP">
+	   <h1> <img
+	   style="width:40px;"src="img/PETS/Termite_Worker_Sprite.png">ADULT TERMITE</h1>
+	   
+            <p>this guy is big ang strong and likes resin</p>
+	  <p>Can Farm 0.00000030 per 3 Seconds</p>
+            
+ <li class="purchaseItem" id="item_adulttermite" data-price="0.00008900"
+ data-bits-per-sec="0.00000030">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00008900</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+     
+     <figure></figure>
+     
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/PICKAXE/COPPERPICKAXE.png">Copper
+	   Hammar</h1>
+	   
+            <p>this hammar can plus the damage</p>
+            <kbd>Can Farm 0.00000010 per seconds</kbd>
+	  
+ <li class="purchaseItem" id="item_copperhammer" data-price="0.00001000"
+ data-bits-per-sec="0.00000010">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.00001000</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+     
+  <figure></figure>
+       
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:29px;"src="img/PETS/Termite_soldier_sprite.png">Small
+	   Soilder</h1>
+	   
+            <p>a small termite soilder which very good farming resins & Redwoods</p>
+            <p>Can Multiply Resins & fungi faster but he sleep sometimes</p>
+            <p>Can farm 0.00000100 per 3 seconds</p>
+            <stamp>Very good at biting</stamp>
+	  
+ <li class="purchaseItem" id="item_smallsoilder" data-price="0.00023500"
+ data-bits-per-sec="0.00000100">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.00023500</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+                
+                
+                
+              
+                <figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/PETS/Termite_soldier_sprite.png">Mid Soilder</h1>
+	   
+            <p>a mid soilder can farm resin & fungi more than you though</p>
+	  <p>Can Farm 0.00000260 per 3 seconds</p>
+ <li class="purchaseItem" id="item_midsoilder" data-price="0.00990000"
+ data-bits-per-sec="0.00000260">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00990000</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+     <figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/PETS/Termite_soldier_sprite.png">Adult Soilder</h1>
+	   
+            <p>Adult Soilder The Beast on biting</p>
+	  <p>Can Farm 0.000000670 Per 2 seconds</p>
+ <li class="purchaseItem" id="item_AdultSoilder" data-price="0.01170000"
+ data-bits-per-sec="0.000000670">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.01170000</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/PETS/Termite_King_Sprite.png">Termite
+	   King</h1>
+	   
+            <p>The Termite King With a sharp bite that can rip your skin out</p>
+	  <p>Can Farm 0.000005015 Per 3 seconds</p>
+ <li class="purchaseItem" id="item_TermiteKing" data-price="1.000000000"
+ data-bits-per-sec="0.000005015">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">1.0 Million</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+<figure></figure>
+	 
+
+
+  </fieldset>
+  
+
+<script>
+  //ONIWASAAAAAAAACOUNTER CUMMER//
+  //OFF://
+
+//FUNCTIONS Summoner//
+let lastClickTime = 0;
+const minClickInterval = 300; // 300ms minimum interval between clicks
+
+//COLLECT://
+
+function CollectSmallResin() {
+ 
+const currentTime = Date.now();
+    if (currentTime - lastClickTime >= minClickInterval) {
+        lastClickTime = currentTime;
+        
+    Resins = Resins + 0.00000001
+
+    // Show the new number on the page
+    if(Resins > 1000000){
+
+      let ResinUnitNumber = Resins.optimizeNumber()
+      $(".ResinAmount").text(ResinUnitNumber)
+
+    }else if(Resins >= 1000){
+      $(".ResinAmount").text(Resins.toFixed(0))
+    }else if(Resins >= 1){
+      $(".ResinAmount").text(Resins.toFixed(2))
+    }else{
+      $(".ResinAmount").text(Resins.toFixed(8))
+    }
+
+    if((Resins * 100000000) < 1000000) {
+      $(".WorkerAmount").text(Math.round((Resins * 100000000)))
+    }else{
+
+      let satoshiUnitNumber = (Resins * 100000000).optimizeNumber()
+      $(".WorkerAmount").text(satoshiUnitNumber)
+    }
+var audio = new Audio('music/collect.mp3');
+audio.play();
+    } else {
+        console.log("Click too fast, ignored.");
+    }
+}
+</script>
+</fieldset>
+
+  
+  <style>
+  body {
+    text-shadow:2px 2px 5px ;
+    margin: 1px;
+  }
+  .SHOP {
+    border-radius: 20px;
+    border-color: black;
+    background-color: #E5AA70;
+    color: white;
+    font-style: 1;
+  }
+  .SHOPGold {
+    border-radius: 20px;
+    border-color: black;
+    background-color: #F4FA58;
+    color: white;
+    font-style: 1;
+   
+   
+  }
+  .SHOPLegend {
+    border-radius: 20px;
+    border-color: black;
+    background-color: purple;
+    color: white;
+    font-style: 1;
+   
+   
+  }
+
+    #buttonSettings {
+      width: 200px;
+      height: 30px;
+      background-color: #C19A6B;
+      border-radius: 2px;
+      border-color: white;
+      border:100;
+      color: white;
+    }
+    #buttonSettings9 {
+      text-anchor: a wasuto;
+      background-color: #C19A6B;
+      border-color: white;
+      color: white;
+      align-items: center;
+      margin: 0px;
+      padding: 30px;
+      border: 0px;
+      text-align: center;
+      align-content: center;
+      border-radius: 15px;
+      color: white;
+    }
+  </style> 
+      
+          
+              
+ </fieldset>
+    <script>
+var Resins = 0.00000001
+var ResinRate = 0
+
+// Every item in the game
+// TODO: items should be part of the Game variable
+var items = [
+{
+    "name": "item_TermiteWorker",
+    "price": "0.00000200"
+  },
+{
+    "name": "item_ClassicTermite",
+    "price": "0.00002000"
+  },
+  
+{
+    "name": "item_adulttermite",
+    "price": "0.00008900"
+  },
+  
+{
+    "name": "item_copperhammer",
+    "price": "0.00001000"
+
+  },
+{
+    "name": "item_smallsoilder",
+   "price": "0.00023500"
+  },
+  
+  
+{
+    "name": "item_midsoilder",
+    "price": "0.00990000"
+  },
+  
+{
+    "name": "item_AdultSoilder",
+    "price": "0.01170000"
+  },
+  
+{
+    "name": "item_TermiteKing",
+    "price": "1.00000000"
+  },
+
+//EQUIPMENT SHOP//
+
+
+];
+
+
+
+
+// Rate is null (at the beginning)
+var bSec = null;
+
+// If there is no Resins Item in the localStorage, create one.
+// If there is one, do the other thing.
+if(localStorage.getItem("Resins") === null){
+  // Resins are 0
+  Resins = 0
+
+  // Set the localStorage Item for the first time
+  localStorage.setItem("Resins", "0");
+
+  // Write the current amount of Resins on the page
+  $(".ResinAmount").text(Resins.toFixed(8))
+
+}else{
+
+  // Get the amount of Resins and parse them to a float number
+  Resins = parseFloat(localStorage.getItem("Resins"))
+
+  $(".ResinAmount").text("loading...")
+  $(".WorkerAmount").text("loading...")
+
+  let satoshis = Resins * 100000000;
+
+}
+
+/**
+ *
+ *  <-- Setting up the game´s functions -->
+ *
+ */
+
+
+
+// Game variable which will contain any needed major function or needed variables for the game.
+var Game = {}
+
+
+// Every constant variable is saved here
+Game.GameConst = {
+  "priceMultiplier": "1.15",
+  "VERSION": "1"
+}
+
+Game.units = [
+"Million",
+      "Billion",
+      "Trillion",
+      "Quadrillion",
+      "Quintillion",
+      "Sextillion",
+      "Septillion",
+      "Octillion",
+      "Nonillion",
+      "Decillion",
+      "Undecillion",
+      "Duodecillion",
+      "Tredecillion",
+      "Quattuordecillion",
+      "Quindecillion",
+      "Sexdecillion",
+      "Septdecillion",
+      "Octodecillion",
+      "Novemdecillion",
+      "Vigintillion",
+      "Unvigintillion",
+      "Duovigintillion",
+      "Trevigintillion",
+      "Quattuorvigintillion",
+      "Quinvigintillion",
+      "Sexvigintillion",
+      "Septvigintillion",
+      "Octovigintillion",
+      "Novemvigintillion",
+      "Trigintillion"
+]
+
+
+
+/**
+ * Calculating every price for the items when the game was started (and if there are any items).
+ *
+ * @param element {HTMLElement} - The HTML element of the item on the game page
+ * @param price {Number} - The price of the item, got from the items Object
+ * @param itemAmount {Number} - The current amount of the item, saved in the localStorage
+ */
+
+Game.setPriceAtGameBeginning = function (element, price, itemAmount) {
+
+  // Calculation of the price
+  var multiplier = Game.GameConst.priceMultiplier
+
+  // Calculate the new price -> price * multiplier^itemAmount
+  var calculation = (parseFloat(price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
+
+  // Showing the actual price
+  element.children()[2].textContent = calculation + ""
+
+  // Set the data-price attribute with the new price
+  element.attr("data-price", calculation.toString())
+
+}
+
+
+
+/**
+ * Function to increase the amount of the item (in the localStorage) with the specific identifier.
+ *
+ * @param id - The identifier of the item (the id from the list element)
+ */
+Game.itemAction = function (id) {
+
+  var item = id
+  var itemAmount = 0;
+
+  if(localStorage.getItem(item) === null){
+    localStorage.setItem(item, "1");
+  }else{
+    itemAmount = parseInt(localStorage.getItem(item))
+
+    localStorage.setItem(item, "" + (itemAmount + 1) + "");
+
+  }
+
+}
+
+
+
+/**
+ * Calculating the Resins per Second - rate when the page was opened.
+ *
+ */
+Game.setResinPerSecondRateAtBeginning = function () {
+
+  for(var i = 0; i < items.length; i++){
+    if(localStorage.getItem(items[i].name) === null){
+      localStorage.setItem(items[i].name, "0")
+    }else{
+      // HTML element on the game page
+      var $element = $("#" + items[i].name)
+
+      // Amnount of the item
+      var itemAmount = localStorage.getItem(items[i].name)
+
+      // Writing the amount on the page at the item´s element
+      $element.children()[0].textContent = itemAmount
+
+      // Only calculate the new price if there is more than 0 items.
+      // If there are not enough items, it will just continue, and if there are,
+      // it will execute the function and continue after it as well.
+      if(itemAmount > 0) {
+        Game.setPriceAtGameBeginning($element, parseFloat(items[i].price), parseInt(itemAmount))
+      }
+
+      // Getting the data-bits-per-sec attribute, needed for calculating the Resin/sec rate
+      var bits_per_sec = $element.attr("data-bits-per-sec")
+      itemAmount = parseInt(itemAmount)
+
+      // The rate before
+      var before = ResinRate
+
+      // Calculating the rate
+      ResinRate = ResinRate + (itemAmount * bits_per_sec)
+
+      // Logging the calculation in the console
+      console.log("i = " + i + " | B/sec before: " + before.toFixed(8) +
+        " - Calculation made: " + before.toFixed(8) + " + (" + itemAmount + " * " + bits_per_sec + ") = " +  ResinRate.toFixed(8) +
+        " | New B/sec at " + ResinRate.toFixed(8))
+    }
+  }
+
+}
+
+
+
+/**
+ * Function which sets a new "Resin per Second" rate
+ *
+ * @param rate - The number which must be added to the current Resin per Second - rate
+ * @returns {Number} - Returning the new Resin per Second - rate
+ */
+Game.setNewResinRate = function (rate) {
+
+  // Logging the new Resin per second rate
+  console.log("setNewResinRate -> New rate: " + (ResinRate + rate).toFixed(8) )
+
+  // Showing the new rate on the page
+  // Rounding at specific values
+  if((ResinRate + rate) >= 1000000) {
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(0).optimizeNumber())
+  }else if((ResinRate + rate) >= 1000 ){
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(0))
+  }else if((ResinRate + rate) >= 1 ){
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(2))
+  }else{
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(8))
+  }
+
+  // Returning the new rate
+  return ResinRate = ResinRate + rate;
+
+}
+
+
+
+/**
+ * This function will check if there is any change in the localStorage,
+ * especially looking at the item amount. So it will actually calculate every price again and
+ * again. (This function should be recoded)
+ *
+ * TODO: Find a better way for setting the price after an item was bought.
+ */
+Game.setNewPrice = function()
+{
+  // for-loop for getting the price multiplier and to calculate the new price
+  for(var i = 0; i < items.length; i++){
+    if(localStorage.getItem(items[i].name) === null){
+      localStorage.setItem(items[i].name, "0")
+    }else{
+      var $element = $("#" + items[i].name)
+      var itemAmount = localStorage.getItem(items[i].name)
+
+      $element.children()[0].textContent = itemAmount
+
+      // Only calculate if there is more than 0 items
+      if(itemAmount > 0) {
+
+        // Calculation of the price
+        var multiplier = Game.GameConst.priceMultiplier
+        var calculation = (parseFloat(items[i].price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
+
+        // Showing the actual price
+        $element.children()[2].textContent = calculation + ""
+
+        // Set the data-price attribute with the new price
+        $element.attr("data-price", calculation.toString())
+
+      }
+    }
+  }
+  // End of the for-loop
+}
+
+/**
+ * The function which adds new generated Resins to the current Resin amount.
+ *
+ * @param rate - The Resin per second rate; Needed for adding the generated Resins every second
+ */
+Game.bSecFunction = function (rate) {
+
+  Resins = Resins + rate
+
+  // Show both values on the page
+  // Rounding the Resin number at specific set values
+  if(Resins > 1000000){
+
+    let ResinUnitNumber = Resins.optimizeNumber()
+
+    $(".ResinAmount").text(ResinUnitNumber)
+  }else if(Resins >= 1000){
+    $(".ResinAmount").text(Resins.toFixed(0))
+  }else if(Resins >= 1){
+    $(".ResinAmount").text(Resins.toFixed(2))
+  }else{
+    $(".ResinAmount").text(Resins.toFixed(8))
+  }
+
+
+  // Rounding the satoshis amount at a specific value and optimize it for displaying on the screen.
+  var satoshis = Resins * 100000000;
+
+  if(satoshis < 1000000) {
+    $(".WorkerAmount").text(Math.round(satoshis))
+  }else{
+
+    let satoshiUnitNumber = satoshis.optimizeNumber()
+    $(".WorkerAmount").text(satoshiUnitNumber)
+  }
+
+  // Save Resin amount in the storage
+  localStorage.setItem("Resins", "" + Resins + "")
+
+  console.log("bSec -> B/sec at " + rate.toFixed(8))
+
+}
+
+/**
+ * Stops the B/sec interval.
+ */
+Game.stopBsec = function () {
+  clearInterval(bSec)
+}
+
+/**
+ * Function for optimizing the number with an unit for displaying it on the screen.
+ *
+ * @returns {string} An optimized number as a string with its unit
+ */
+Game.optimizeNumber = function () {
+  if(this >= 1e6){
+    let number = parseFloat(this)
+    let unit = Math.floor(parseFloat(number.toExponential(0).toString().replace("+", "").slice(2)) / 3) * 3
+
+    // let test = this.toExponential(0).toString().replace("+", "").slice(2)
+    // console.log(test)
+
+    var num = (this / ('1e'+(unit))).toFixed(2)
+
+    var unitname = Game.units[Math.floor(unit / 3) - 1]
+
+    return num + " " + unitname
+  }
+
+  return this.toLocaleString()
+}
+
+Number.prototype.optimizeNumber = Game.optimizeNumber
+String.prototype.optimizeNumber = Game.optimizeNumber
+
+/**
+ * Resets the game
+ */
+Game.resetGame = function () {
+  Game.stopBsec()
+  localStorage.setItem("Resins", "0")
+  localStorage.clear()
+  location.reload()
+}
+
+// --------------------------------------------------- //
+
+/**
+ * <-- Now doing everything -->
+ */
+
+
+// Calculates the Resin/sec rate with the amount of every item multiplied with their given Resins/second rate.
+Game.setResinPerSecondRateAtBeginning()
+
+// Stating the interval with the calculated Resin/second rate.
+bSec = setInterval(function () {
+  Game.bSecFunction(ResinRate);
+}, 1000)
+
+
+// Doing everything here when the game is ready to be used.
+$(document).ready(function () {
+
+  // Write the version into the .version span element
+  $(".version").text("UPDATE " + Game.GameConst.VERSION)
+
+  // Write the Resin per second rate into the .bSecRateNumber span element
+  if(ResinRate >= 1000){
+    $(".bSecRateNumber").text(ResinRate.toFixed(0))
+  }else if(ResinRate >= 1 ){
+    $(".bSecRateNumber").text(ResinRate.toFixed(2))
+  }else{
+    $(".bSecRateNumber").text(ResinRate.toFixed(8))
+  }
+
+
+  // If clicked on the big Resin
+
+
+  // If any item from the list was clicked...
+  $(".purchaseItem").click(function () {
+if (window.confirm("Purchase This Item Click >OK< to confirm"))
+  {
+  
+document.getElementById("purchasesound").play();
+    console.log("Music.Play!Check(browser).id(0)")
+    // Get following attributes and children elements
+
+    // id of the item
+    var id = $(this).attr("id")
+
+    // The price attribute as a float number
+    var price = parseFloat($(this).attr("data-price"))
+    // The b/sec attribute from the item as a float numb pa p pm
+    
+
+    var ResinsPerSecond = parseFloat($(this).attr("data-bits-per-sec"))
+
+    // The element which shows how many of the item is existing
+    var amountDisplay = $(this).children()[0]
+    var amountDisplayAmount = parseInt(localStorage.getItem(id))
+
+    var priceDisplay = $(this).children()[2]
+
+    // If you have enough Resins, it´ll buy one item
+    if(parseFloat(Resins.toFixed(8)) >= price){
+
+      // Substract the price from the current Resin number and set it to the Resins variable.
+      Resins = parseFloat(Resins.toFixed(8)) - price
+
+      // Save the new amount of Resins in the localStorage storage
+      localStorage.setItem("Resins", "" + Resins + "")
+
+      // Changing amount number on the right of the item
+      amountDisplayAmount = amountDisplayAmount + 1
+      amountDisplay.textContent = amountDisplayAmount.toString()
+
+      // Changing the Resins amount
+      // Rounding the Resin number at specific values
+      if(Resins > 1e6){
+
+        let ResinUnitNumber = Resins.optimizeNumber()
+        $(".ResinAmount").text(ResinUnitNumber)
+
+      }else if(Resins >= 1000){
+        $(".ResinAmount").text(Resins.toFixed(0))
+      }else if(Resins >= 1){
+        $(".ResinAmount").text(Resins.toFixed(2))
+      }else{
+        $(".ResinAmount").text(Resins.toFixed(8))
+      }
+
+      // Calculation the Satoshi amount
+      if((Resins * 100000000) < 1e6) {
+        $(".WorkerAmount").text(Math.round((Resins * 100000000)))
+      }else{
+
+        let satoshiUnitNumber = (Resins * 100000000).optimizeNumber()
+        $(".WorkerAmount").text(satoshiUnitNumber)
+
+      }
+
+      // Increasing the amount of the specific item
+      Game.itemAction(id)
+
+      // Stops the interval
+      Game.stopBsec()
+
+      // Setting a new price and show it
+      Game.setNewPrice()
+
+      // Saving the new calculated Resin/second rate in a variable
+      var newRate = Game.setNewResinRate(ResinsPerSecond)
+
+      // Restarting the interval with the new rate
+      bSec = setInterval(function () {
+        Game.bSecFunction(newRate);
+      }, 1000)
+
+    }
+  
+}
+else
+{
+  
+  }
+  
+  
+  })
+
+  //
+  // If the reset button was pressed, do following thing
+  $(".resetButton").click(function () {
+
+ 
+ 
+    Game.resetGame()
+  })
+
+});
+
+
+    </script>
+    <script>
+
+  
+
+
+function init() {
+      const savedValue = localStorage.getItem('savedValue');
+    if (savedValue) {
+        document.getElementById('termitename').value = savedValue;
+    } else {
+        console.log("No DataFound(Server)")
+    }
+}
+    </script>
+    <Style>
+     .box-led{
+  background-color:#EADDCA;
+    border-radius: 15px;
+  border-color: #6F4E37;  
+     }
+     
+                     /* Animations woohoo */
+
+/* Rotation animation */
+/* Solution found on StackOverflow: https://stackoverflow.com/questions/16771225/css3-rotate-animation#16771693 */
+@keyframes rotation {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: VCR OSD Mono;
+    src: url("../fonts/VCR_OSD_MONO.ttf");
+}
+
+/* Body */
+/* Solution for disabling text selection found on StackOverflow:
+https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with-css-or-javascript */
+body {
+ background-color:#E1C16E	;
+}
+
+.gameFullContent{
+    width: auto;
+    display: flex;
+}
+
+/* Left Container */
+/* just a placeholder atm */
+.leftContainer{
+    width: calc(100% * 0.25);
+}
+
+.version{
+  
+}
+
+.resetButton{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 9%;
+    height: 4%;
+    border: 3px solid black;
+    font-size: 12pt;
+    
+    background: #ffb84c;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Container */
+/* THE Resin IMAGE */
+.mainGameContent{
+    width: calc(100% * 0.5);
+}
+
+/* Right Container */
+/* All items which you can buy */
+
+ 
+
+.ResinAmountDisplay{
+    text-align: center;
+    
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    margin: 20px 0 0 0px;
+}
+.WorkerAmountDisplay {
+    text-align: center;
+    
+    font-size: 15pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    padding: 0 !important;
+    margin: 0 0 -15px 0px;
+}
+.bSecRate{
+    text-align: center;
+   
+    font-size: 13px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black
+}
+
+/* Resin */
+.btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
+}
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
+/* Item list */
+.purchaseList{
+    list-style-type: none;
+    font-family: "VCR OSD Mono", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Optimization for smaller screens */
+
+   .btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
+}
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
+.purchaseItem{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+}
+.attackbuttom{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+}
+/* Item list item */
+.attackbuttom:hover{
+    
+    background: #C19A6B(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.purchaseItem:hover{
+    background: #C19A6B(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.amountOfItem{
+    float: right;
+    font-size: 66pt;
+    margin-right: 15px;
+    color: rgba(0,0,0,.4);
+    margin-top: -10px;
+    margin-bottom: -50px;
+}
+.itemHeadline{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+}
+
+ body {
+overflow-y: scroll; /* has to be scroll, not auto */
+
+   padding:0px;
+  
+  }
+ .Resin {
+    padding: 50px;
+ 
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #C19A6B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.Resin:hover {background-color: #C19A6B}
+
+.Resin:active {
+  background-color: #C19A6B;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+    </style>
+
+<script type="text/javascript" charset="utf-8">
+
+
+// Output:
+// Hello, world!
+// Hello, world!
+// Hello, world!
+</script>
+
+
+<audio id="musicgame" src="music/music.mp3" loop="loop"></audio>
+<audio id="musicgameBackUp" src="music/music.mp3" loop="loop"></audio>
+<audio id="purchasesound" src="music/purchasesound.mp3" ></audio>
+
+<script>
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+
+}
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info( "This page is reloaded" );
+document.getElementById("musicgameBackUp").play();
+    console.log("Music.Play!Check(browser).id(0)");
+} else {
+  console.info( "This page is not reloaded");
+document.getElementById("musicgame").play();
+    console.log("Music.Play!Check(browser).id(0)");
+}
+
+    
+
+ 
+</script>
+  
+  <script>
+    
+  </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    <script src="js/login.js"></script>k
+    <script>
+
+document.getElementById("name").innerHTML = localStorage.getItem("Username");
+
+
+ </script>
+
+ <style>
+ body {
+   background-image:url('img/background.png');
+   background-position: center;
+   background-size: 100%;
+ }
+   #pfp {
+     border-radius:50%;
+     width: 50px;
+     height: 50px;
+float: right;
+margin-right: 10px;
+   }
+   .UserMenu {
+     display: inline;
+     
+   }
+#name {
+
+}
+.titleGame {
+  float: left;
+  margin: 6px;
+  margin-bottom: 16px;
+}
+.bar {
+background-color:	#6F4E37;
+border-color:	#6F4E37;
+color: white;
+}
+.section1 {
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxVReUfgBuYnEVUJL1WzIG2XEsiGD6guEW_Q&amp;usqp=CAU');
+   background-position: center;
+   background-size: 100%;
+  height: 200;
+  
+}
+.back {
+  padding: 10px;
+border-top-right-radius: 10px;
+margin: 20px;
+background-color:	#6F4E37;
+color: white;
+border-color:	#6F4E37;
+}
+.NavMe {
+  float:left;
+  margin-bottom: 10px;
+}
+li {
+  margin-top: 5px;
+}
+fieldset {
+  margin-top: 5px;
+}
+ </style>
+ <script>
+
+let lastMousePosition = { x: 0, y: 0 };
+
+function onMouseMove(event) {
+    // Compare current mouse position to last known position
+    const moveThreshold = 50; // Detect large movement thresholds
+    if (Math.abs(event.clientX - lastMousePosition.x) > moveThreshold || 
+        Math.abs(event.clientY - lastMousePosition.y) > moveThreshold) {
+        // Large mouse movement detected; allow click
+    } else {
+        // No significant mouse movement, possible auto-clicker
+    }
+    lastMousePosition = { x: event.clientX, y: event.clientY };
+}
+
+ </script>
+<script>
+        // Add event listener to the entire document
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();  // Prevent the context menu from appearing
+            alert('Right Click Is Disabled by Admins');
+        });
+    </script>
+    <script src="js/SecurityS.js"></script>
+
+
+<script>
+  //BACKUP CRASH SCRIPT//
+
+</script>

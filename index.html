@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Termite Empire</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta
+      name="description"
+      content="Create Your Termite Empire by Clicking. A Clicker game to make a termite empire. collect resin for the queen" />
+    <meta name="theme-color" content="Black" />
+    <meta name="keywords" content="Termite Empire, Termite , Termite Empire Clicker, clicker game, termite game, oniwa, penut" />
+    <meta name="author" content="KlienReijiOniwa" />
+<link rel="icon" href=
+"img/icon-game.png" 
+          type="image/x-icon">
+    <meta name="theme-color" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- open graph metadata -->
+    <meta property="og:title" content="Termite Empire" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url"
+    content="https://klienreijioniwa.github.io/Termite-Empire/" />
+    <meta property="og:image" content="img/icon-game.png" />
+    <meta
+      property="og:description"
+      content="Create Your Termite Empire by Clicking. A Clicker game to make a termite empire. collect resin for the queen">
+    <!-- Stylesheets -->
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Termite Empire</title>
+  </head>
+  <body id="formite" onload="init()">
+    <h2 class="titleMe">Termite Empire</h2>
+    <div class="container">
+      <form action="" id="form">
+        <div class="box">
+          <h1>Login</h1>
+          <label for="username">Username:</label>
+          <input data-store="1"id="username" name="username" type="text">
+        </div>
+        <div class="box">
+          <label for="password">Password:</label>
+          <input data-store="2"id="password" name="password" type="password">
+        </div>
+
+        <button type="submit" id="login">Login</button>
+        <div class="link">
+          <a href="register.html">I Dont Have An Account</a>
+    
+        </div>
+
+      </form>
+
+    </div>
+    <script src="sweetalert.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitw;
+     background-image:url('img/background.png');
+   background-position: center;
+   background-size: 100%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+form {
+  width: 300px;
+  padding: 20px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+background-color: #C19A6B;
+orphans: 30%;
+}
+form h1 {
+  text-align: center;
+}
+form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+}
+.box label {
+  font-size: 20px;
+}
+.box input {
+  display: block;
+  padding: 10px;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 12px;
+  border: 0;
+}
+.box .error {
+  color: red;
+  font-size: 10px;
+  height: 15px;
+}
+.box input:focus {
+  outline: 0;
+}
+.box.success input {
+  border: 1px solid green;
+}
+.box.error input {
+  border: 1px solid red;
+}
+.link {
+  text-align: center;
+  padding: 15px;
+}
+.titleMe {
+  margin-top: 100px;
+  margin-left: 10px;
+  text-shadow: 3px 2px black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: white;
+}
+</style>
+<script>
+var initSubject='',initBody='';
+ 
+ function init(){
+        subText.value=initSubject;
+        //nameText.value=initTo;
+        bodyText.value=initBody;
+    };
+    $(document).ready (function () {
+      $("*[data-store]").each(function () {
+        $(this).val(localStorage.getItem("item-" + $(this).attr("data-store")));
+      });
+
+      $("*[data-store]").on("keyup", function (itm) {
+        localStorage.setItem ("item-" + $(this).attr("data-store"), $(this).val());
+      })
+    })
+</script>
+      <center>
+  <kbd>
+  </kbd>
+  
+      </center>
+

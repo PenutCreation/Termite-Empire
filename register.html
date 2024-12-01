@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Termite Empire</title>
+    <h2 class="titleMe">Termite Empire</h2>
+ 
+  </head>
+  <body>
+    <div class="container">
+      <form action="" id="form">
+        <div class="box">
+          <h1>Registration Form</h1>
+          <label for="username">Username:</label>
+          <input id="username" name="username" type="text">
+          <div class="error"></div>
+        </div>
+        <div class="box">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="text">
+          <div class="error"></div>
+        </div>
+        <div class="box">
+          <label for="password">Password:</label>
+          <input id="password" name="password" type="password">
+          <div class="error"></div>
+        </div>
+        <div class="box">
+          <label for="password">Confirm Password:</label>
+          <input id="psw" name="psw" type="password">
+          <div class="error"></div>
+        </div>
+        <button type="submit" id="btn">Register Now</button>
+        <div class="link">
+          <a href="index.html">Already have an account</a>
+        </div>
+      </form>
+    </div>
+    <script src="./sweetalert.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitw;
+     background-image:url('img/background.png');
+   background-position: center;
+   background-size: 100%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+form {
+  width: 300px;
+  padding: 20px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+background-color: #C19A6B;
+orphans: 30%;
+}
+form h1 {
+  text-align: center;
+}
+form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+}
+.box label {
+  font-size: 20px;
+}
+.box input {
+  display: block;
+  padding: 10px;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 12px;
+  border: 0;
+}
+.box .error {
+  color: red;
+  font-size: 10px;
+  height: 15px;
+}
+.box input:focus {
+  outline: 0;
+}
+.box.success input {
+  border: 1px solid green;
+}
+.box.error input {
+  border: 1px solid red;
+}
+.link {
+  text-align: center;
+  padding: 15px;
+}
+.titleMe {
+  margin-top: 100px;
+  margin-left: 10px;
+  text-shadow: 3px 2px black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: white;
+}
+</style>
+      <center>
+  <kbd>Version 2.0 | Client:6.29
+  </kbd>
+  
+      </center>
+
+<audio id="musicgame" src="music/music.mp3" loop="loop"></audio>
+<audio id="musicgameBackUp" src="music/music.mp3" loop="loop"></audio>
+<audio id="purchasesound" src="music/purchasesound.mp3" ></audio>
+<audio id="collectSFX" src="music/collect.mp3" ></audio>
+
+      <script>
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+
+}
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info( "This page is reloaded" );
+document.getElementById("musicgameBackUp").play();
+    console.log("Music.Play!Check(browser).id(0)");
+} else {
+  console.info( "This page is not reloaded");
+document.getElementById("musicgame").play();
+    console.log("Music.Play!Check(browser).id(0)");
+}
+      </script>
+      
