@@ -1,0 +1,753 @@
+body {
+
+  }
+  .SHOP {
+    border-radius: 20px;
+    border-color: black;
+    background-color: #E5AA70;
+    color: white;
+    font-style: 1;
+  }
+  .SHOPGold {
+    border-radius: 20px;
+    border-color: black;
+    background-color: #F4FA58;
+    color: white;
+    font-style: 1;
+  }
+
+  }
+  .SHOPLegend {
+    border-radius: 20px;
+    border-color: black;
+    background-color: purple;
+    color: white;
+    font-style: 1;
+   
+   
+  }
+
+    #buttonSettings {
+      width: 200px;
+      height: 30px;
+      background-color: #C19A6B;
+      border-radius: 2px;
+      border-color: white;
+      border:100;
+      color: white;
+    }
+    #buttonSettings9 {
+      text-anchor: a wasuto;
+      background-color: #C19A6B;
+      border-color: white;
+      color: white;
+      align-items: center;
+      margin: 0px;
+      padding: 30px;
+      border: 0px;
+      text-align: center;
+      align-content: center;
+      border-radius: 15px;
+      color: white;
+    }
+    .form-container {
+      max-width: 300px;
+      margin: 50px auto;
+      background-color: #0012;
+      color: white;
+      padding:10px;
+    }
+    
+button {
+display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #220;
+      border-radius: 5px;
+      border-color: black;
+      
+}
+    input{
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+    }
+    button {
+
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .status-message {
+      color: red;
+    }
+    #logoutButton {
+      background-color: #db4437;
+      display: none;
+    }
+    #hiddenContent {
+      display: none;
+      
+    }
+    .form-switch {
+      margin-top: 15px;
+    }
+    .form-switch a {
+      color: #4285F4;
+      text-decoration: none;
+    }
+    .form-switch a:hover {
+      text-decoration: underline;
+    }
+    .password-container {
+      position: relative;
+      color: black;
+    }
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+
+  .tweetHeader{
+    color: #8899a6;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 35px;
+    margin-left: 30px;
+  }
+  .messageBox{
+    width: 93%;
+    padding: 5px;
+    resize: none;
+    height: 60px;
+    color: #292F33;
+    display: block;
+    font-size: 13px;
+    font-weight: 200;
+    margin: 10px auto;
+    border-radius: 3px;
+    border: 1px solid #a3d4f2;
+  }
+  .messageBox:focus{
+    outline: none;
+  }
+  .wordCounter{
+    background-color: transparent;
+    color: #8899a6;
+    display: inline-block;
+    width: 70%;
+    border: 0;
+    padding: 0 15px;
+    position: relative;
+    vertical-align: top;
+    top: 10px;
+    text-align: right;
+    font-size: 14px;
+    text-shadow: 0 1px 1px rgba(255,255,255,.75);
+  }
+
+  /*   */
+  .close {
+    cursor: pointer;
+    float: right;
+    margin: 12px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    content: ' ';
+    height: 13px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+}
+
+                     /* Animations woohoo */
+
+/* Rotation animation */
+/* Solution found on StackOverflow: https://stackoverflow.com/questions/16771225/css3-rotate-animation#16771693 */
+@keyframes rotation {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: VCR OSD Mono;
+    src: url("../fonts/VCR_OSD_MONO.ttf");
+}
+
+/* Body */
+/* Solution for disabling text selection found on StackOverflow:
+https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with-css-or-javascript */
+
+.gameFullContent{
+    width: auto;
+    display: flex;
+}
+
+/* Left Container */
+/* just a placeholder atm */
+.leftContainer{
+    width: calc(100% * 0.25);
+}
+
+.version{
+  
+}
+
+.resetButton{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 9%;
+    height: 4%;
+    border: 3px solid black;
+    font-size: 12pt;
+    
+    background: #ffb84c;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Container */
+/* THE Resin IMAGE */
+.mainGameContent{
+    width: calc(100% * 0.5);
+}
+
+/* Right Container */
+/* All items which you can buy */
+
+ 
+
+.ResinAmountDisplay{
+    text-align: center;
+    
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    margin: 20px 0 0 0px;
+}
+.WorkerAmountDisplay {
+    text-align: center;
+    
+    font-size: 15pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    padding: 0 !important;
+    margin: 0 0 -15px 0px;
+}
+.bSecRate{
+    text-align: center;
+   
+    font-size: 13px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black
+}
+
+/* Resin */
+.btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
+}
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
+/* Item list */
+.purchaseList{
+    list-style-type: none;
+    font-family: "VCR OSD Mono", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Optimization for smaller screens */
+
+   .btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
+}
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
+.purchaseItem{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+}
+.attackbuttom{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+}
+/* Item list item */
+.attackbuttom:hover{
+    
+    background: #C19A6B(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.purchaseItem:hover{
+    background: #C19A6B(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.amountOfItem{
+    float: right;
+    font-size: 66pt;
+    margin-right: 15px;
+    color: rgba(0,0,0,.4);
+    margin-top: -10px;
+    margin-bottom: -50px;
+}
+.itemHeadline{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+}
+
+ 
+ .Resin {
+    padding: 50px;
+ 
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #C19A6B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.Resin:hover {background-color: #C19A6B}
+
+.Resin:active {
+  background-color: #C19A6B;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.currencyicon {
+  width: 20px;
+}
+#rotate {
+transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+    animation: rotation 20s linear infinite;
+}
+#rotate:hover {
+  width: 90px;
+}
+#rotate:active {
+  width: 100px;
+transform: translateY(4px);
+}
+/* Set a style for all buttons */
+.button {
+  background-color: #5C4033;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+<figure></figure>
+
+	       
+		          
+        <div id="buttonSettings9">    <b class="WorkerAmountDisplay">
+
+        <h4>Power:</h4>
+		<span class="bSecRateNumber">0</span> 
+        </b></div>
+		    <figure></figure>
+		   
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+
+/* Set a style for all buttons */
+#obutton {
+  background-color: #C19A6B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1000px;
+}
+
+#obutton:hover {
+  opacity: 0.8;
+border-radius: 1000px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+   #pfp {
+     border-radius:50%;
+     width: 50px;
+     height: 50px;
+float: right;
+margin-right: 10px;
+   }
+   .UserMenu {
+     display: inline;
+     
+   }
+#name {
+
+}
+.titleGame {
+  float: left;
+  margin: 6px;
+  margin-bottom: 16px;
+}
+.bar {
+background-color:	#6F4E37;
+border-color:	#6F4E37;
+color: white;
+}
+.section1 {
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxVReUfgBuYnEVUJL1WzIG2XEsiGD6guEW_Q&amp;usqp=CAU');
+   background-position: center;
+   background-size: 100%;
+  height: 200;
+  
+}
+.back {
+  padding: 10px;
+border-top-right-radius: 10px;
+margin: 20px;
+background-color:	#6F4E37;
+color: white;
+border-color:	#6F4E37;
+}
+.NavMe {
+  float:left;
+  margin-bottom: 10px;
+}
+li {
+  margin-top: 5px;
+}
+fieldset {
+  margin-top: 5px;
+}
+
+   #pfp {
+     border-radius:50%;
+     width: 50px;
+     height: 50px;
+float: right;
+margin-right: 10px;
+   }
+   .UserMenu {
+     display: inline;
+     
+   }
+#name {
+
+}
+.titleGame {
+  float: left;
+  margin: 6px;
+  margin-bottom: 16px;
+}
+.bar {
+background-color:	#6F4E37;
+border-color:	#6F4E37;
+color: white;
+}
+.section1 {
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxVReUfgBuYnEVUJL1WzIG2XEsiGD6guEW_Q&amp;usqp=CAU');
+   background-position: center;
+   background-size: 100%;
+  height: 200;
+  
+}
+.back {
+  padding: 10px;
+border-top-right-radius: 10px;
+margin: 20px;
+background-color:	#6F4E37;
+color: white;
+border-color:	#6F4E37;
+}
+.NavMe {
+  float:left;
+  margin-bottom: 10px;
+}
+li {
+  margin-top: 5px;
+}
+
+.item.log {
+  border-color: yellow;
+  background-color: #0012;
+}
+   .box-led {
+  background-color:#EADDCA;
+    border-radius: 15px;
+  border-color: #6F4E37;  
+     }
+     .talkbox {
+border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+     }
+
+.overlay-text {
+  color: white;
+  text-shadow: black;
+}
+.resinpiles {
+  
+}
+.retext {
+  color: white;
+  text-shadow: black;
+}
+.resinpiles {
+  padding-bottom: 10px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  height: 0;
+  height: 100%;
+}
