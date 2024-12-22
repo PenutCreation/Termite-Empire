@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termite Empire</title>
+<link rel="stylesheet" type="text/css" href="style/main.css">
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="js/SpinScript.js" preload="auto"></script>
+</head>
+ <fieldset class="bar">
+   <img>
+   <div class="UserMenu">
+     <h2 class="titleGame">Termite Empire</h2>
+    <p style="float:left;" class="version"></p>      
+       <tr>
+         <br><br>
+
+    <button style="width:70px; float:left; display:flex; position:absolute;">    
+    <a style="color:black;">Settings</a>        
+          </button>
+
+
+
+</tr>
+   </div>
+ </fieldset>
+<body>
+  <div class="form-container">
+    <div id="smalltext">
+    <h1>Termite Empire</h1>
+    <p>Register or log in now</p>
+</div>
+    <h1 hidden="" id="greeting">Welcome To Meko</h1>
+
+    <!-- Registration Form -->
+    <div id="registerForm">
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Enter Username" />
+      <input type="email" id="regEmail" placeholder="Enter Email" />
+      <div class="password-container">
+        <input type="password" id="regPassword" placeholder="Enter Password" />
+        <span class="toggle-password"
+        onclick="togglePassword('regPassword')">️See Password</span>
+      </div>
+      <button onclick="register()">Register</button>
+      <p class="form-switch">Already have an account? <a href="javascript:void(0)" onclick="showLogin()">Log In</a></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" style="display:none;">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Enter Username" />
+      <div class="password-container">
+
+        <input type="password" id="loginPassword" placeholder="Enter Password" />
+        <span class="toggle-password"
+        onclick="togglePassword('loginPassword')">️See Password</span>
+      </div>
+      <button onclick="login()">Log In</button>
+      <p class="form-switch">Don't have an account? <a href="javascript:void(0)" onclick="showRegister()">Register</a></p>
+
+  </div>
+    <p id="status"></p>
+    
+    <div id="description">
+<h3>Termite Empire </h3>
+<p>is a unique blend of clicker and tower defense gameplay where you lead an army of termites in their quest to collect resin, build forces, and defend their precious resources from relentless enemies!</p>
+<img style="width: 100%; max-width: 400px; height: auto;" src="img/poster2.jpg"
+alt="POSTER2">
+<h2>Build Your Social Circle</h2>
+<p>Building your social network is easy with Meko. Whether you want to stay connected with old friends, meet new people with similar interests, or interact with colleagues, you can easily send friend requests or follow profiles. As you expand your network, your feed becomes even more personalized, bringing you the latest content from people and pages you care about. You can search for users by name, location, interests, or other identifiers, making it simple to find the people who matter most.
+<img style="width: 100%; max-width: 400px; height: auto;" src="img/poster3.jpg"
+alt="POSTER2">
+In this exciting strategy game, you start small—clicking to gather resin, the lifeblood of your termite colony. Use the collected resin to recruit more termites, upgrade their abilities, and fortify your defenses. But beware! Enemies will come to steal your resin, so you must prepare to defend your base with strategic towers, traps, and termite soldiers.</p>
+
+  <h3>Key Features:</h3>
+<li>
+  <b>Click to Collect:</b><p>
+Gather resin to expand your termite colony and unlock new upgrades 🔥
+  </p>
+</li>
+<li>
+  <b>Tower Defense Mechanics:</b><p>
+Build defenses and deploy termites to repel waves of enemies trying to raid your resin ⚙️⚡
+  </p>
+</li>
+<li>
+  <b>Upgrade and Expand: </b><p>
+Spend resin to buy more termites, enhance their strength, and unlock powerful tools 🚀🍄
+  </p>
+</li>
+<li>
+  <b>Stragetic Battles : </b><p>
+Balance offense and defense as you plan attacks while fortifying against enemy raids 🗡️🐜🪳
+  </p>
+</li>
+<li>
+  <b>Endless Challenges: </b><p>
+Face tougher enemies as you progress and see how long you can protect your colony. 🗡️🐜🪳
+  </p>
+</li>
+<p>Can you build the ultimate termite army, defend your resin, and dominate the
+battlefield? It’s time to click, defend, and conquer in Termite Empire</p>
+<br></br>
+<p>2024-2024 • Made with Heart by OniwaPenut from phlippines </p>
+</div>
+  </div>
+
+
+    <!-- Content visible only when logged in -->
+    <div id="hiddenContent">
+
+<center>  
+        <figure></figure>
+        <div class="mainGameContent">
+<button onclick="document.getElementById('id01').style.display='block'"
+style="width:auto; " id="obutton">CHANGELOG</button>
+          <button>
+            <a href="indx.html">Fix Music</a>
+          </button>
+            <h2 style="color:red;"class="ResinAmountDisplay">
+
+              <img class="currencyicon" style="width:39px;" src="img/fungi.png">:<span
+              class="ResinAmount">0</span> </h2>
+
+    <figcaption></figcaption>
+         
+
+<figure></figure>
+
+		
+  <center>
+  <div class="resinpiles">
+ <p id="resin1">
+ <a id="CollectResin1">
+<img src="img/fungi.png" width="100px" >
+<p class="overlay-text">
+500/<span id="resinhealth1">500</span>
+</p>
+</a></p>
+</div>
+</center>
+<center>
+   </center>
+   
+<button style="color:black;">
+  Power:<span class="bSecRateNumber"></span>
+</button>
+<button style="color:black;">PLACES:</button>
+<button style="color:black;">
+  <a href="#farmfungus">Fungus Farm</a>
+</button>
+                </center>   
+	
+
+</body>
+</html>
+</fieldset>
+ <center>
+
+ </center>
+ 
+ 
+ <fieldset id="TERMITE"class="box-led"><legend><span
+ style="color:white;"><button style="color:black;">Classic Termite</button></span></legend>
+
+                
+
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:28px;"src="img/PETS/Termite_Worker_Sprite.png">Small
+	   Termite</h1>
+	   
+                      <p>Small Termite worker. it can only gaves you 0.00000001 resins
+                      per 3 second</p>
+                      <p>Per Purchase more Resins</p>
+	  
+ <li class="purchaseItem" id="item_TermiteWorker" data-price="0.000200"
+ data-bits-per-sec="0.00000001">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase</p>
+
+<kbd class="itemPrice">0.00000800</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>   
+            
+            
+	 <fieldset class="SHOP">
+	   <h1><img style="width:40px;"src="img/PETS/Termite_Worker_Sprite.png">Classic
+	   Termite</h1>
+	   
+             
+             <p>he a cool & very not cringe termite</p>
+	  <p>Can Farm 0.00000005 per 3 Second</p>
+ <li class="purchaseItem" id="item_ClassicTermite" data-price="0.00002000"
+ data-bits-per-sec="0.00000005">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.00002000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>    
+ 
+ <figure></figure>
+ 
+	 <fieldset class="SHOP">
+	   <h1> <img
+	   style="width:40px;"src="img/PETS/Termite_Worker_Sprite.png">ADULT TERMITE</h1>
+	   
+            <p>this guy is big ang strong and likes resin</p>
+	  <p>Can Farm 0.00000030 per 3 Seconds</p>
+            
+ <li class="purchaseItem" id="item_adulttermite" data-price="0.00008900"
+ data-bits-per-sec="0.00000030">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00008900</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>    
+     
+     <figure></figure>
+     
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/PICKAXE/COPPERPICKAXE.png">Copper
+	   Hammar</h1>
+	   
+            <p>this hammar can plus the damage</p>
+            <kbd>Can Farm 0.00000010 per seconds</kbd>
+	  
+ <li class="purchaseItem" id="item_copperhammer" data-price="0.00001000"
+ data-bits-per-sec="0.00000010">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.00001000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>    
+     
+  <figure></figure>
+       
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:29px;"src="img/PETS/Termite_soldier_sprite.png">Small
+	   Soilder</h1>
+	   
+            <p>a small termite soilder which very good farming resins & Redwoods</p>
+            <p>Can Multiply Resins & fungi faster but he sleep sometimes</p>
+            <p>Can farm 0.00000100 per 3 seconds</p>
+            <stamp>Very good at biting</stamp>
+	  
+ <li class="purchaseItem" id="item_smallsoilder" data-price="0.00023500"
+ data-bits-per-sec="0.00000100">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.00023500</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>    
+                
+                
+                
+              
+                <figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/PETS/Termite_soldier_sprite.png">Mid Soilder</h1>
+	   
+            <p>a mid soilder can farm resin & fungi more than you though</p>
+	  <p>Can Farm 0.00000260 per 3 seconds</p>
+ <li class="purchaseItem" id="item_midsoilder" data-price="0.00990000"
+ data-bits-per-sec="0.00000260">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00990000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>    
+     <figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/PETS/Termite_soldier_sprite.png">Adult Soilder</h1>
+	   
+            <p>Adult Soilder The Beast on biting</p>
+	  <p>Can Farm 0.000000670 Per 2 seconds</p>
+ <li class="purchaseItem" id="item_AdultSoilder" data-price="0.01170000"
+ data-bits-per-sec="0.000000670">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Purchase</p>
+
+<kbd class="itemPrice">0.01170000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>    
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/PETS/Termite_King_Sprite.png">Termite
+	   King</h1>
+	   
+            <p>The Termite King With a sharp bite that can rip your skin out</p>
+	  <p>Can Farm 0.000005015 Per 3 seconds</p>
+ <li class="purchaseItem" id="item_TermiteKing" data-price="1.000000000"
+ data-bits-per-sec="0.000005015">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">1.0 Million</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+
+  </fieldset>
+<figure></figure>
+
+<fieldset class="box-led" id="farmfungus">
+  <legend>
+    <button style="color:black;">FUNGUS FARM</button>
+  </legend>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 1</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 0.000000700 Per 10 seconds</p>
+ <li class="purchaseItem" id="farm_square1" data-price="0.000003500"
+ data-bits-per-sec="0.000000700">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase.</p>
+
+<kbd class="itemPrice">0.000003500</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 2</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 0.000035000 Per 10 seconds</p>
+ <li class="purchaseItem" id="farm_square2" data-price="0.000092500"
+ data-bits-per-sec="0.000035000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase.</p>
+
+<kbd class="itemPrice">0.000092500</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 3</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 0.000100000 Per 10 seconds</p>
+ <li class="purchaseItem" id="farm_square3" data-price="0.000105000"
+ data-bits-per-sec="0.000100000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase.</p>
+
+<kbd class="itemPrice">0.000105000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 4</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 0.000150000 Per 3 seconds</p>
+ <li class="purchaseItem" id="farm_square4" data-price="0.400000000"
+ data-bits-per-sec="0.000150000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase.</p>
+
+<kbd class="itemPrice">0.400000000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 5</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 0.000950000 Per 3 seconds</p>
+ <li class="purchaseItem" id="farm_square5" data-price="0.770000000"
+ data-bits-per-sec="0.000950000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase.</p>
+
+<kbd class="itemPrice">0.770000000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 6</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 0.009990000 Per 3 seconds</p>
+ <li class="purchaseItem" id="farm_square6" data-price="0.999000000"
+ data-bits-per-sec="0.009990000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase</p>
+
+<kbd class="itemPrice">0.999000000</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:50px;"src="img/mushroom.png">SQUARE 7</h1>
+	   
+            <p>square farm. to farm mushroom to turn to fungi</p>
+	  <p>Can Farm 1.999990000 Per 3 seconds</p>
+ <li class="purchaseItem" id="farm_square7" data-price="1.555000000"
+ data-bits-per-sec="1.999990000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Purchase</p>
+
+<kbd class="itemPrice">1.5 Million</kbd> <img style="" class="currencyicon" src="img/fungi.png">
+
+                </li>
+            </fieldset>  
+  </fieldset>
+  
+  </div>
+  
+
+<div id="settings" style="display:none;">
+  <button>back</button>
+  <button></button>
+    <button id="logoutButton" onclick="logout()">Log Out</button>
+</div>
+
+<script>
+let chestHealth = 10; // Initialize chest health
+
+// Resin configuration
+const resins = [
+    { id: "resinhealth1", buttonId: "CollectResin1", health: 500},
+];
+
+// Function to update resin and worker amounts
+function updateUI() {
+    // Update resin amount
+    let ResinUnitNumber = Resins > 1000000
+        ? Resins.toFixed(0)
+        : Resins >= 1000
+        ? Resins.toFixed(0)
+        : Resins >= 1
+        ? Resins.toFixed(2)
+        : Resins.toFixed(8);
+    $(".ResinAmount").text(ResinUnitNumber);
+
+    // Update worker amount
+    let WorkerAmount = Resins * 100000000 < 1000000
+        ? Math.round(Resins * 100000000)
+        : (Resins * 100000000).toFixed(0);
+    $(".WorkerAmount").text(WorkerAmount);
+}
+
+// Function to handle resin button clicks
+function handleResinClick(resin) {
+    const resinElement = document.getElementById(resin.id);
+    const buttonElement = document.getElementById(resin.buttonId);
+
+    buttonElement.addEventListener("click", () => {
+        Resins += 0.00000001; // Increment Resins
+        updateUI();
+
+        // Play click sound
+        const clickAudio = new Audio('music/clickresin.wav');
+        clickAudio.play();
+
+        // Decrement health
+        resin.health -= 1;
+        if (resin.health > 0) {
+            resinElement.textContent = `${resin.health}`;
+        } else {
+            buttonElement.style.display = "none";
+            const collectAudio = new Audio('music/collect.wav');
+            collectAudio.play();
+
+            setTimeout(() => {
+                // Reset health and re-enable button
+                resin.health = 500;
+                resinElement.textContent = `${resin.health}`;
+                buttonElement.style.display = "block";
+            }, 7000);
+        }
+    });
+}
+
+// Attach event listeners to all resin buttons
+resins.forEach(handleResinClick);
+
+
+</script>
+</body>
+</html>
+<audio id="musicgame" src="music/music.mp3" loop="loop"></audio>
+<audio id="musicgameBackUp" src="music/music.mp3" loop="loop"></audio>
+<audio id="purchasesound" src="music/purchasesound.mp3" ></audio>
+
+<script>
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+
+}
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info( "This page is reloaded" );
+document.getElementById("musicgameBackUp").play();
+    console.log("Music.Play!Check(browser).id(0)");
+} else {
+  console.info( "This page is not reloaded");
+document.getElementById("musicgame").play();
+    console.log("Music.Play!Check(browser).id(0)");
+}
+</script>
+
+ <style>
+
+ </style>
+ <script>
+
+let lastMousePosition = { x: 0, y: 0 };
+
+function onMouseMove(event) {
+    // Compare current mouse position to last known position
+    const moveThreshold = 50; // Detect large movement thresholds
+    if (Math.abs(event.clientX - lastMousePosition.x) > moveThreshold || 
+        Math.abs(event.clientY - lastMousePosition.y) > moveThreshold) {
+        // Large mouse movement detected; allow click
+    } else {
+        // No significant mouse movement, possible auto-clicker
+    }
+    lastMousePosition = { x: event.clientX, y: event.clientY };
+}
+
+ </script>
+<script>
+        // Add event listener to the entire document
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();  // Prevent the context menu from appearing
+            alert('Right Click Is Disabled by Admins');
+        });
+    </script>
+
+</head>
+<body>
+
+
+
+
+
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" >
+<fieldset class="item-log">
+<fieldset>
+  <h3>Added Beta 3e.2</h3>
+  <kbd>OniwaPenut • Dec 22 2024</kbd>
+  
+  <p>this is beta which i added easter eggs and fix the server capacity and i
+Anti Cheat Disabled. and i added a fungus farm</p>
+  <p>
+    <b>Resin Icon Removal:</b>
+    we have finally removed the resin icon. reason termite doesnt eat too often some
+    resin and some other cases</p>
+  <p>
+    <b>Fungus Farm:</b>By Purchasing the squares on fungus farm
+  you can gain more fungus </p>
+    <p>
+    <b>Economy Enhancement:</b>making the game economy more standard and
+    fair to amoung of you people </p>
+</fieldset>
+<fieldset>
+  <h3>Patch 1.1 Asset</h3>
+  <kbd>OniwaPenut • Dec 20 2024</kbd>
+  <p>we have a big changed to the buttons. it haved changed to piled resin.
+  which located down the
+  shop a good way perspective and make the game more originality</p>
+  <li>
+    <b>Pile Resin:</b>A piled resin it is same to the previous button when clicked it
+    gives Resin which cool and the difference is the button has capcity of
+    Resins. and the resins spawns on how much do capacity of resin it has for
+    example: 10 Resins / Spawn Tick: 7 Seconds
+  </li>
+</fieldset>
+<fieldset>
+  <h3>UPDATE 1:(Patch 1)</h3>
+  <kbd>OniwaPenut • Dec 19 2024</kbd>
+  <p>Revamp designs and change 50% Values from the termites</p>
+  <li>Tick Click Change to 400 milisecond per click</li>
+  <li>Change Button Arrangement</li>
+  <li>Added Server Fooster</li>
+  <li>Player Local Users Are Allowed</li>
+  <li>Right Click Disabled</li>
+</fieldset>
+<fieldset>
+  <h1>Offical Update 1</h1>
+  
+  <kbd>OniwaPenut • Oct 17 2024</kbd>
+  <p>Technical Issues is fixed and account management.</p>
+</fieldset>
+</fieldset>
+</div>
+  
+</div>
+</form>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function talkmysteryking() {
+  alert("Mystery King Termite:??? ha A Pesant! do not talk to me or i burn your colony down like ashes")
+}
+
+//resin blud funtions//
+// Initial health
+
+
+
+</script>
+
+<style>
+  body {
+    text-shadow:2px 2px 5px black ;
+    margin: 1px;
+    font-family: Arial, sans-serif;
+   background-image:url('img/background.png');
+   background-position: center;
+   background-size: 100%;
+  }
+</style>
+<script>
+ // Predefined list of restricted usernames and banlisted users
+    const restrictedUsernames = ['admin', 'superuser', 'root', 'test', 'guest'];
+    const banlistUsernames = ['bannedUser1', 'bannedUser2', 'evilUser']; // List of banned usernames
+
+    // Check if the user is logged in on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const username = localStorage.getItem('username');
+      if (username) {
+        // If logged in, update the UI
+        updateUI(username);
+      } else {
+        // If not logged in, show the register form
+        showRegister();
+      }
+    });
+
+    // Register function
+    function register() {
+      const username = document.getElementById('regUsername').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value.trim();
+
+      // Check if username is in the restricted list
+      if (restrictedUsernames.includes(username.toLowerCase())) {
+        document.getElementById('status').textContent = 'This username is not available. Please choose another one.';
+        document.getElementById('status').classList.add('status-message');
+        return;
+      }
+
+      // Check if username is banned
+      if (banlistUsernames.includes(username.toLowerCase())) {
+        document.getElementById('status').textContent = 'This username is banned. Please choose another one.';
+        document.getElementById('status').classList.add('status-message');
+        return;
+      }
+
+      // Check if email format is valid
+      if (!isValidEmail(email)) {
+        document.getElementById('status').textContent = 'Please enter a valid email address.';
+        document.getElementById('status').classList.add('status-message');
+        return;
+      }
+
+      // Check if username or email already exists in LocalStorage
+      const existingUser = localStorage.getItem(username);
+      const existingEmail = localStorage.getItem(email);
+
+      if (existingUser) {
+        // If the username already exists, display a message
+        document.getElementById('status').textContent = 'Username is already taken. Please choose another one.';
+        document.getElementById('status').classList.add('status-message');
+      } else if (existingEmail) {
+        // If the email already exists, display a message
+        document.getElementById('status').textContent = 'Email is already registered. Please use another one.';
+        document.getElementById('status').classList.add('status-message');
+      } else {
+        // Save the username, email, and password in localStorage (simulate registration)
+        localStorage.setItem(username, password);
+        localStorage.setItem(email, password);  // Store email with associated password
+        localStorage.setItem('username', username);  
+        localStorage.setItem('email', email); 
+        // Set the logged-in username
+
+        // Update the UI to reflect the login state
+        updateUI(username);
+      }
+    }
+
+    // Login function
+    function login() {
+      const username = document.getElementById('loginUsername').value.trim();
+      const password = document.getElementById('loginPassword').value.trim();
+
+      // Check if the username is banned
+      if (banlistUsernames.includes(username.toLowerCase())) {
+        document.getElementById('status').textContent = 'This account is banned.';
+        document.getElementById('status').classList.add('status-message');
+        return;
+      }
+
+      // Retrieve the stored password for the username
+      const storedPassword = localStorage.getItem(username);
+
+      if (storedPassword && storedPassword === password) {
+        // Successfully logged in
+        localStorage.setItem('username', username); 
+        localStorage.setItem('email', email); 
+        // Set the logged-in username
+
+        // Update the UI to reflect the login state
+        updateUI(username);
+      } else {
+        // Invalid credentials
+        document.getElementById('status').textContent = 'Invalid username or password.';
+        document.getElementById('status').classList.add('status-message');
+      }
+    }
+
+    // Logout function (does not delete LocalStorage)
+    function logout() {
+      // Reset the UI (does not remove username or password from localStorage)
+      resetUI();
+    }
+
+    // Update the UI for a logged-in user
+    function updateUI(username) {
+      document.getElementById('description').style.display = 'none';
+      document.getElementById('smalltext').style.display = 'none';
+      document.getElementById('greeting').style.display = 'none';
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('registerForm').style.display = 'none';
+      document.getElementById('logoutButton').style.display = 'block';
+      document.getElementById('status').textContent = '';
+      
+      // Show hidden content
+      document.getElementById('hiddenContent').style.display = 'block';
+    }
+
+    // Reset the UI for a logged-out user
+    function resetUI() {
+      document.getElementById('greeting').textContent = 'Welcome';
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('registerForm').style.display = 'none';
+      document.getElementById('logoutButton').style.display = 'none';
+      document.getElementById('hiddenContent').style.display = 'none';
+      document.getElementById('status').textContent = 'You have logged out.';
+
+      // Clear login data
+      localStorage.removeItem('username');
+    }
+
+    // Helper function for email validation
+    function isValidEmail(email) {
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      return emailPattern.test(email);
+    }
+
+    // Show the Register form
+    function showRegister() {
+      document.getElementById('registerForm').style.display = 'block';
+      document.getElementById('loginForm').style.display = 'none';
+    }
+
+    // Show the Login form
+    function showLogin() {
+      document.getElementById('registerForm').style.display = 'none';
+      document.getElementById('loginForm').style.display = 'block';
+    }
+
+    // Toggle password visibility
+    function togglePassword(passwordFieldId) {
+      const passwordField = document.getElementById(passwordFieldId);
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';  // Reveal password
+      } else {
+        passwordField.type = 'password';  // Hide password
+      }
+    }
+
+
+// Retrieve data from localStorage
+
+</script>
+<script>
+
+var Resins = 0.00000001
+var ResinRate = 0
+
+// Every item in the game
+// TODO: items should be part of the Game variable
+var items = [
+{
+    "name": "item_TermiteWorker",
+    "price": "0.00000200"
+  },
+{
+    "name": "item_ClassicTermite",
+    "price": "0.00002000"
+  },
+  
+{
+    "name": "item_adulttermite",
+    "price": "0.00008900"
+  },
+  
+{
+    "name": "item_copperhammer",
+    "price": "0.00001000"
+
+  },
+{
+    "name": "item_smallsoilder",
+   "price": "0.00023500"
+  },
+  
+  
+{
+    "name": "item_midsoilder",
+    "price": "0.00990000"
+  },
+  
+{
+    "name": "item_AdultSoilder",
+    "price": "0.01170000"
+  },
+  
+{
+    "name": "item_TermiteKing",
+    "price": "1.00000000"
+  },
+{
+    "name": "farm_square1",
+    "price": "0.000003500"
+  },
+  {
+    "name": "farm_square2",
+    "price": "0.000092500"
+  },
+  {
+    "name": "farm_square3",
+    "price": "0.000105000"
+  },
+  {
+    "name": "farm_square4",
+    "price": "0.400000000"
+  },
+  {
+    "name": "farm_square5",
+    "price": "0.770000000"
+  },
+  {
+    "name": "farm_square6",
+    "price": "0.999000000"
+  },
+  {
+    "name": "farm_square7",
+    "price": "1.555000000"
+  }
+
+];
+
+
+
+
+// Rate is null (at the beginning)
+var bSec = null;
+
+// If there is no Resins Item in the localStorage, create one.
+// If there is one, do the other thing.
+if(localStorage.getItem("Resins") === null){
+  // Resins are 0
+  Resins = 0
+
+  // Set the localStorage Item for the first time
+  localStorage.setItem("Resins", "0");
+
+  // Write the current amount of Resins on the page
+  $(".ResinAmount").text(Resins.toFixed(8))
+
+}else{
+
+  // Get the amount of Resins and parse them to a float number
+  Resins = parseFloat(localStorage.getItem("Resins"))
+
+  $(".ResinAmount").text("loading...")
+  $(".WorkerAmount").text("loading...")
+
+  let satoshis = Resins * 100000000;
+
+}
+
+/**
+ *
+ *  <-- Setting up the game´s functions -->
+ *
+ */
+
+
+
+// Game variable which will contain any needed major function or needed variables for the game.
+var Game = {}
+
+
+// Every constant variable is saved here
+Game.GameConst = {
+  "priceMultiplier": "1.15",
+  "VERSION": "1"
+}
+
+Game.units = [
+"Million",
+      "Billion",
+      "Trillion",
+      "Quadrillion",
+      "Quintillion",
+      "Sextillion",
+      "Septillion",
+      "Octillion",
+      "Nonillion",
+      "Decillion",
+      "Undecillion",
+      "Duodecillion",
+      "Tredecillion",
+      "Quattuordecillion",
+      "Quindecillion",
+      "Sexdecillion",
+      "Septdecillion",
+      "Octodecillion",
+      "Novemdecillion",
+      "Vigintillion",
+      "Unvigintillion",
+      "Duovigintillion",
+      "Trevigintillion",
+      "Quattuorvigintillion",
+      "Quinvigintillion",
+      "Sexvigintillion",
+      "Septvigintillion",
+      "Octovigintillion",
+      "Novemvigintillion",
+      "Trigintillion"
+]
+
+
+
+/**
+ * Calculating every price for the items when the game was started (and if there are any items).
+ *
+ * @param element {HTMLElement} - The HTML element of the item on the game page
+ * @param price {Number} - The price of the item, got from the items Object
+ * @param itemAmount {Number} - The current amount of the item, saved in the localStorage
+ */
+
+Game.setPriceAtGameBeginning = function (element, price, itemAmount) {
+
+  // Calculation of the price
+  var multiplier = Game.GameConst.priceMultiplier
+
+  // Calculate the new price -> price * multiplier^itemAmount
+  var calculation = (parseFloat(price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
+
+  // Showing the actual price
+  element.children()[2].textContent = calculation + ""
+
+  // Set the data-price attribute with the new price
+  element.attr("data-price", calculation.toString())
+
+}
+
+
+
+/**
+ * Function to increase the amount of the item (in the localStorage) with the specific identifier.
+ *
+ * @param id - The identifier of the item (the id from the list element)
+ */
+Game.itemAction = function (id) {
+
+  var item = id
+  var itemAmount = 0;
+
+  if(localStorage.getItem(item) === null){
+    localStorage.setItem(item, "1");
+  }else{
+    itemAmount = parseInt(localStorage.getItem(item))
+
+    localStorage.setItem(item, "" + (itemAmount + 1) + "");
+
+  }
+
+}
+
+
+
+/**
+ * Calculating the Resins per Second - rate when the page was opened.
+ *
+ */
+Game.setResinPerSecondRateAtBeginning = function () {
+
+  for(var i = 0; i < items.length; i++){
+    if(localStorage.getItem(items[i].name) === null){
+      localStorage.setItem(items[i].name, "0")
+    }else{
+      // HTML element on the game page
+      var $element = $("#" + items[i].name)
+
+      // Amnount of the item
+      var itemAmount = localStorage.getItem(items[i].name)
+
+      // Writing the amount on the page at the item´s element
+      $element.children()[0].textContent = itemAmount
+
+      // Only calculate the new price if there is more than 0 items.
+      // If there are not enough items, it will just continue, and if there are,
+      // it will execute the function and continue after it as well.
+      if(itemAmount > 0) {
+        Game.setPriceAtGameBeginning($element, parseFloat(items[i].price), parseInt(itemAmount))
+      }
+
+      // Getting the data-bits-per-sec attribute, needed for calculating the Resin/sec rate
+      var bits_per_sec = $element.attr("data-bits-per-sec")
+      itemAmount = parseInt(itemAmount)
+
+      // The rate before
+      var before = ResinRate
+
+      // Calculating the rate
+      ResinRate = ResinRate + (itemAmount * bits_per_sec)
+
+      // Logging the calculation in the console
+      console.log("i = " + i + " | B/sec before: " + before.toFixed(8) +
+        " - Calculation made: " + before.toFixed(8) + " + (" + itemAmount + " * " + bits_per_sec + ") = " +  ResinRate.toFixed(8) +
+        " | New B/sec at " + ResinRate.toFixed(8))
+    }
+  }
+
+}
+
+
+
+/**
+ * Function which sets a new "Resin per Second" rate
+ *
+ * @param rate - The number which must be added to the current Resin per Second - rate
+ * @returns {Number} - Returning the new Resin per Second - rate
+ */
+Game.setNewResinRate = function (rate) {
+
+  // Logging the new Resin per second rate
+  console.log("setNewResinRate -> New rate: " + (ResinRate + rate).toFixed(8) )
+
+  // Showing the new rate on the page
+  // Rounding at specific values
+  if((ResinRate + rate) >= 1000000) {
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(0).optimizeNumber())
+  }else if((ResinRate + rate) >= 1000 ){
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(0))
+  }else if((ResinRate + rate) >= 1 ){
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(2))
+  }else{
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(8))
+  }
+
+  // Returning the new rate
+  return ResinRate = ResinRate + rate;
+
+}
+
+
+
+/**
+ * This function will check if there is any change in the localStorage,
+ * especially looking at the item amount. So it will actually calculate every price again and
+ * again. (This function should be recoded)
+ *
+ * TODO: Find a better way for setting the price after an item was bought.
+ */
+Game.setNewPrice = function()
+{
+  // for-loop for getting the price multiplier and to calculate the new price
+  for(var i = 0; i < items.length; i++){
+    if(localStorage.getItem(items[i].name) === null){
+      localStorage.setItem(items[i].name, "0")
+    }else{
+      var $element = $("#" + items[i].name)
+      var itemAmount = localStorage.getItem(items[i].name)
+
+      $element.children()[0].textContent = itemAmount
+
+      // Only calculate if there is more than 0 items
+      if(itemAmount > 0) {
+
+        // Calculation of the price
+        var multiplier = Game.GameConst.priceMultiplier
+        var calculation = (parseFloat(items[i].price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
+
+        // Showing the actual price
+        $element.children()[2].textContent = calculation + ""
+
+        // Set the data-price attribute with the new price
+        $element.attr("data-price", calculation.toString())
+
+      }
+    }
+  }
+  // End of the for-loop
+}
+
+/**
+ * The function which adds new generated Resins to the current Resin amount.
+ *
+ * @param rate - The Resin per second rate; Needed for adding the generated Resins every second
+ */
+Game.bSecFunction = function (rate) {
+
+  Resins = Resins + rate
+
+  // Show both values on the page
+  // Rounding the Resin number at specific set values
+  if(Resins > 1000000){
+
+    let ResinUnitNumber = Resins.optimizeNumber()
+
+    $(".ResinAmount").text(ResinUnitNumber)
+  }else if(Resins >= 1000){
+    $(".ResinAmount").text(Resins.toFixed(0))
+  }else if(Resins >= 1){
+    $(".ResinAmount").text(Resins.toFixed(2))
+  }else{
+    $(".ResinAmount").text(Resins.toFixed(8))
+  }
+
+
+  // Rounding the satoshis amount at a specific value and optimize it for displaying on the screen.
+  var satoshis = Resins * 100000000;
+
+  if(satoshis < 1000000) {
+    $(".WorkerAmount").text(Math.round(satoshis))
+  }else{
+
+    let satoshiUnitNumber = satoshis.optimizeNumber()
+    $(".WorkerAmount").text(satoshiUnitNumber)
+  }
+
+  // Save Resin amount in the storage
+  localStorage.setItem("Resins", "" + Resins + "")
+
+  console.log("bSec -> B/sec at " + rate.toFixed(8))
+
+}
+
+/**
+ * Stops the B/sec interval.
+ */
+Game.stopBsec = function () {
+  clearInterval(bSec)
+}
+
+/**
+ * Function for optimizing the number with an unit for displaying it on the screen.
+ *
+ * @returns {string} An optimized number as a string with its unit
+ */
+Game.optimizeNumber = function () {
+  if(this >= 1e6){
+    let number = parseFloat(this)
+    let unit = Math.floor(parseFloat(number.toExponential(0).toString().replace("+", "").slice(2)) / 3) * 3
+
+    // let test = this.toExponential(0).toString().replace("+", "").slice(2)
+    // console.log(test)
+
+    var num = (this / ('1e'+(unit))).toFixed(2)
+
+    var unitname = Game.units[Math.floor(unit / 3) - 1]
+
+    return num + " " + unitname
+  }
+
+  return this.toLocaleString()
+}
+
+Number.prototype.optimizeNumber = Game.optimizeNumber
+String.prototype.optimizeNumber = Game.optimizeNumber
+
+/**
+ * Resets the game
+ */
+Game.resetGame = function () {
+  Game.stopBsec()
+  localStorage.setItem("Resins", "0")
+  localStorage.clear()
+  location.reload()
+}
+
+// --------------------------------------------------- //
+
+/**
+ * <-- Now doing everything -->
+ */
+
+
+// Calculates the Resin/sec rate with the amount of every item multiplied with their given Resins/second rate.
+Game.setResinPerSecondRateAtBeginning()
+
+// Stating the interval with the calculated Resin/second rate.
+bSec = setInterval(function () {
+  Game.bSecFunction(ResinRate);
+}, 1000)
+
+
+// Doing everything here when the game is ready to be used.
+$(document).ready(function () {
+
+  // Write the version into the .version span element
+  $(".version").text("UPDATE " + Game.GameConst.VERSION)
+
+  // Write the Resin per second rate into the .bSecRateNumber span element
+  if(ResinRate >= 1000){
+    $(".bSecRateNumber").text(ResinRate.toFixed(0))
+  }else if(ResinRate >= 1 ){
+    $(".bSecRateNumber").text(ResinRate.toFixed(2))
+  }else{
+    $(".bSecRateNumber").text(ResinRate.toFixed(8))
+  }
+
+
+  // If clicked on the big Resin
+
+
+  // If any item from the list was clicked...
+  
+  $(".purchaseItem").click(function () {
+  if (window.confirm("Purchase This Item Click >OK< to confirm")) {
+    document.getElementById("purchasesound").play();
+    console.log("Music.Play!Check(browser).id(0)");
+
+    // Get following attributes and children elements
+
+    // id of the item
+    var id = $(this).attr("id");
+
+    // The price attribute as a float number
+    var price = parseFloat($(this).attr("data-price"));
+
+    // The b/sec attribute from the item as a float number
+    var ResinsPerSecond = parseFloat($(this).attr("data-bits-per-sec"));
+
+    // The element which shows how many of the item is existing
+    var amountDisplay = $(this).children()[0];
+    var amountDisplayAmount = parseInt(localStorage.getItem(id));
+
+    var priceDisplay = $(this).children()[2];
+
+    // If you have enough Resins, it´ll buy one item
+    if (parseFloat(Resins.toFixed(8)) >= price) {
+      // Subtract the price from the current Resin number and set it to the Resins variable.
+      Resins = parseFloat(Resins.toFixed(8)) - price;
+
+      // Save the new amount of Resins in the localStorage storage
+      localStorage.setItem("Resins", "" + Resins + "");
+
+      // Changing amount number on the right of the item
+      amountDisplayAmount = amountDisplayAmount + 1;
+      amountDisplay.textContent = amountDisplayAmount.toString();
+
+      // Changing the Resins amount
+      // Rounding the Resin number at specific values
+      if (Resins > 1e6) {
+        let ResinUnitNumber = Resins.optimizeNumber();
+        $(".ResinAmount").text(ResinUnitNumber);
+      } else if (Resins >= 1000) {
+        $(".ResinAmount").text(Resins.toFixed(0));
+      } else if (Resins >= 1) {
+        $(".ResinAmount").text(Resins.toFixed(2));
+      } else {
+        $(".ResinAmount").text(Resins.toFixed(8));
+      }
+
+      // Calculation of the Satoshi amount
+      if ((Resins * 100000000) < 1e6) {
+        $(".WorkerAmount").text(Math.round((Resins * 100000000)));
+      } else {
+        let satoshiUnitNumber = (Resins * 100000000).optimizeNumber();
+        $(".WorkerAmount").text(satoshiUnitNumber);
+      }
+
+      // Increasing the amount of the specific item
+      Game.itemAction(id);
+
+      // Stops the interval
+      Game.stopBsec();
+
+      // Setting a new price and show it
+      Game.setNewPrice();
+
+      // Saving the new calculated Resin/second rate in a variable
+      var newRate = Game.setNewResinRate(ResinsPerSecond);
+
+      // Restarting the interval with the new rate
+      bSec = setInterval(function () {
+        Game.bSecFunction(newRate);
+      }, 1000);
+
+    } else {
+      // Alert when Resin is not enough
+      alert("Not enough Resin to purchase this item.");
+    }
+  }
+});
+
+
+  //
+  // If the reset button was pressed, do following thing
+  $(".resetButton").click(function () {
+
+ 
+ 
+    Game.resetGame()
+  })
+
+});
+
+
+</script>
+<script>
+// Global game state
+
+</script>
